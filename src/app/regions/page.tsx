@@ -1,12 +1,13 @@
-import React from 'react';
-import {findAllRegions} from "@/lib/regions";
-import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Region} from "@/types/region";
-import {Button} from "@/components/ui/button";
-import Link from "next/link";
 import {ArrowRightIcon} from "@radix-ui/react-icons";
 import Image from "next/image";
+import Link from "next/link";
+import React from 'react';
+
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Typography} from "@/components/ui/typography";
+import {findAllRegions} from "@/lib/regions";
+import {Region} from "@/types/region";
 
 export default async function Regions():Promise<React.ReactElement>{
     const regions = await findAllRegions()
