@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Onest } from 'next/font/google'
 import '../styles/globals.css'
 import React from "react";
 
-const inter = Inter({ subsets: ['latin'] })
+const onest = Onest({ subsets: ['latin'] })
+
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -17,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-    <body className={inter.className}>
+    <body className={onest.className}>
     <main className="flex min-h-screen flex-col p-24">
       {children}
     </main>
