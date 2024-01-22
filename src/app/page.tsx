@@ -1,7 +1,14 @@
-import { Button } from '@/components/ui/button'
+import React from "react";
 
-export default function Home() {
+import {Typography} from "@/components/ui/typography";
+
+export default function Home () {
   return (
-      <Button>shadcn test button</Button>
+    <Typography
+      className="text-center ml-2 md:text-start"
+      variant="h1"
+    >
+			Esto es COLOMBIA
+    </Typography>
   )
 }

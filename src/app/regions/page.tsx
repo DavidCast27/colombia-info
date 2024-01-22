@@ -9,39 +9,38 @@ import {Typography} from "@/components/ui/typography";
 import {findAllRegions} from "@/lib/regions";
 import {Region} from "@/types/region";
 
-export default async function Regions():Promise<React.ReactElement>{
-    const regions = await findAllRegions()
-    console.log(regions)
-    return (
-        <>
-        <Typography variant="h1">Regiones de colombia</Typography>
-        <section className="flex gap-4 flex-wrap">
-            {regions.map(({id, name}:Region)=>(
-                <Card key={id}>
-                    <CardHeader>
-                        <CardTitle>{name}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <Image
-                            src={`/assets/regions/${id}.png`}
-                            width={200}
-                            height={350}
-                            className="block"
-                            alt={`Imagen de ${name}`}
-                        />
-                    </CardContent>
-                    <CardFooter>
-                        <Button>
-                            <Link href={`/regions/${id}`}>Conocer mas</Link>
-                            <ArrowRightIcon />
-                        </Button>
-                    </CardFooter>
-                </Card>
-
-            ))}
-        </section>
-        </>
-    );
+export default async function Regions (): Promise<React.ReactElement> {
+  const regions = await findAllRegions ()
+  return (
+    <>
+      <Typography className="text-center ml-2 md:text-start" variant="h1">Regiones de colombia</Typography>
+      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 2xl:grid-cols-6 gap-4">
+        {regions.map (({id, name}: Region) => (
+          <Card key={id} className="mx-auto">
+            <CardHeader>
+              <CardTitle className="text-xl">{name}</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <Image
+                src={`/assets/regions/${id}.png`}
+                width={180}
+                height={350}
+                className="block"
+                alt={`Imagen de ${name}`}
+              />
+            </CardContent>
+            <CardFooter>
+              <Button>
+                <Link href={`/regions/${id}`}>Conocer mas</Link>
+                <ArrowRightIcon/>
+              </Button>
+            </CardFooter>
+          </Card>
+        ))}
+      </section>
+		
+    </>
+  );
 }
 
 

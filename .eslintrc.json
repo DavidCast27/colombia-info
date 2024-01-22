@@ -4,13 +4,34 @@
     "eslint:recommended",
     "plugin:import/warnings"
   ],
-  "plugins": ["react", "react-hooks", "import"],
+  "plugins": [
+    "react",
+    "react-hooks",
+    "import"
+  ],
   "rules": {
-    "import/order": ["error", {
-      "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
-      "newlines-between": "always",
-      "alphabetize": {"order": "asc", "caseInsensitive": true}
-    }],
-    "import/prefer-default-export": "off"
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index"
+        ],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "indent": [
+      "error",
+      2
+    ]
   }
 }
