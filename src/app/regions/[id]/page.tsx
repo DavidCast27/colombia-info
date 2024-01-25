@@ -41,7 +41,6 @@ export default async function PageDetail({ params }: {params: {id: string}}) {
           />
         </article>
       </section>
-		
     </>
   );
 }

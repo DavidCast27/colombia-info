@@ -1,11 +1,11 @@
-import type {Metadata} from 'next'
-import {Onest} from 'next/font/google'
+import type { Metadata } from 'next'
+import { Onest } from 'next/font/google'
 import '../styles/globals.css'
 import React from "react";
 
-import {Sidebar} from "@/components/sidebar/sidebar";
+import { Sidebar } from "@/components/sidebar/sidebar";
 
-const onest = Onest ({subsets: ['latin']})
+const onest = Onest({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,13 +16,13 @@ interface RootLayoutProps {
 	children: React.ReactNode
 }
 
-export default function RootLayout ({children}: RootLayoutProps) {
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" className="dark">
       <body className={` ${onest.className}`}>
-        <div className="flex h-screen gap-2">
+        <div className="flex h-screen">
           <Sidebar/>
-          <div className="flex-1 overflow-auto gap-y-6 flex flex-col p-6 ">
+          <div className="flex-1 overflow-auto gap-y-6 flex flex-col py-6 px-10">
             <main>
               {children}
             </main>
