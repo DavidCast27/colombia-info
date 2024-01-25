@@ -22,7 +22,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body className={` ${onest.className}`}>
         <div className="flex h-screen">
           <Sidebar/>
-          <div className="flex-1 overflow-auto gap-y-6 flex flex-col py-6 px-10">
+          <div className="flex-1  gap-y-6 flex flex-col py-6 px-10">
             <main>
               {children}
             </main>
