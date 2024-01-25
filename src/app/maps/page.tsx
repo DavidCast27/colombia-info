@@ -3,35 +3,36 @@ import Image from "next/image";
 import Link from "next/link";
 import React from 'react';
 
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Typography } from "@/components/ui/typography";
-import { findAllRegions } from "@/lib/regions";
-import { Region } from "@/types/region";
+import { findAllMaps } from "@/lib/maps";
+import { Map } from "@/types/map";
 
-export default async function Regions(): Promise<React.ReactElement> {
-  const regions = await findAllRegions()
+export default async function Maps(): Promise<React.ReactElement> {
+  const maps: Map[] = await findAllMaps()
   return (
     <>
-      <Typography className="text-center ml-2 md:text-start" variant="h1">Regiones de colombia</Typography>
-      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-6 gap-4 mt-10">
-        {regions.map(({ id, name }: Region) => (
-          <Card key={id} className="mx-auto">
+      <Typography className="text-center ml-2 md:text-start" variant="h1">Mapas de colombia</Typography>
+      <section className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-5 gap-4 mt-10">
+        {maps.map(({ id, name, urlImages }: Map) => (
+          <Card key={id} className={"flex flex-col justify-between"}>
             <CardHeader>
-              <CardTitle className="text-xl">{name}</CardTitle>
+              <CardTitle>{name}</CardTitle>
             </CardHeader>
             <CardContent>
               <Image
                 className="m-auto "
-                src={`/assets/regions/${id}.png`}
+                src={urlImages[0]}
                 width={280}
                 height={290}
                 alt={`Imagen de ${name}`}
               />
             </CardContent>
             <CardFooter>
-              <Button>
-                <Link href={`/regions/${id}`}>Conocer mas</Link>
+              <Button className="mx-auto">
+                <Link href={`/maps/${id}`}>Conocer mas</Link>
                 <ArrowRightIcon className="ml-2 size-4"/>
               </Button>
             </CardFooter>
