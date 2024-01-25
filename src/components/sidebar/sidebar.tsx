@@ -2,20 +2,21 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-import {Typography} from "@/components/ui/typography";
-import {cn} from "@/lib/utils"
+import { Typography } from "@/components/ui/typography";
+import { cn } from "@/lib/utils"
 
 
 interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
-export function Sidebar ({className}: SidebarProps) {
+export function Sidebar({ className }: SidebarProps) {
 	
   const MENU = [
-    {href: "/regions", label: "Regiones"}
+    { href: "/regions", label: "Regiones" },
+    { href: "/maps", label: "Mapas" }
   ]
   return (
-    <aside className={cn ("border-r border-white/50 hidden md:block w-72 p-8", className)}>
+    <aside className={cn("border-r border-white/50 hidden md:block w-72 p-8", className)}>
       <Link href="/" className="flex items-center mb-20">
         <Image
           src="/assets/flag.png"
@@ -30,7 +31,7 @@ export function Sidebar ({className}: SidebarProps) {
       </Link>
       <nav>
         <ul className="space-y-2 font-medium">
-          {MENU.map (({label, href}) => (
+          {MENU.map(({ label, href }) => (
             <li key={label}>
               <Link
                 href={href}
