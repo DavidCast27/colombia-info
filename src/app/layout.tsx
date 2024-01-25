@@ -19,20 +19,16 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" className="dark">
-      <body className={` ${onest.className}`}>
-        <div className="flex h-screen">
-          <Sidebar/>
-          <div className="flex-1  gap-y-6 flex flex-col py-6 px-10">
-            <main>
-              {children}
-            </main>
-            <footer
-              className="border border-white mt-auto bg-[#FFAFFF]"
-            >
-					footer
-            </footer>
-          </div>
-        </div>
+      <body className={`flex h-screen ${onest.className}`}>
+        <Sidebar/>
+        <main className="flex flex-col mx-auto md:pl-80 w-full md:w-[1400px] p-8">
+          {children}
+          <footer
+            className="border border-white mt-auto bg-[#FFAFFF]"
+          >
+				footer
+          </footer>
+        </main>
       </body>
     </html>
   )
