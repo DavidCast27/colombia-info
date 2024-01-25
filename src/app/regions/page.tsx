@@ -14,7 +14,7 @@ export default async function Regions(): Promise<React.ReactElement> {
   return (
     <>
       <Typography className="text-center ml-2 md:text-start" variant="h1">Regiones de colombia</Typography>
-      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-6 gap-4 mt-10">
+      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 ">
         {regions.map(({ id, name }: Region) => (
           <Card key={id} className="mx-auto">
             <CardHeader>
@@ -30,7 +30,7 @@ export default async function Regions(): Promise<React.ReactElement> {
               />
             </CardContent>
             <CardFooter>
-              <Button>
+              <Button className="mx-auto">
                 <Link href={`/regions/${id}`}>Conocer mas</Link>
                 <ArrowRightIcon className="ml-2 size-4"/>
               </Button>

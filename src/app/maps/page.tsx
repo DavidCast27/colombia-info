@@ -15,7 +15,7 @@ export default async function Maps(): Promise<React.ReactElement> {
   return (
     <>
       <Typography className="text-center ml-2 md:text-start" variant="h1">Mapas de colombia</Typography>
-      <section className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-5 gap-4 mt-10">
+      <section className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-5 gap-4">
         {maps.map(({ id, name, urlImages }: Map) => (
           <Card key={id} className={"flex flex-col justify-between"}>
             <CardHeader>

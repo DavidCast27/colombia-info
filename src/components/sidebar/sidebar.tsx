@@ -16,7 +16,7 @@ export function Sidebar({ className }: SidebarProps) {
     { href: "/maps", label: "Mapas" }
   ]
   return (
-    <aside className={cn("border-r border-white/50 hidden md:block w-72 p-8", className)}>
+    <aside className={cn("fixed h-svh border-r border-white/50 hidden md:block w-72 p-8", className)}>
       <Link href="/" className="flex items-center mb-20">
         <Image
           src="/assets/flag.png"
