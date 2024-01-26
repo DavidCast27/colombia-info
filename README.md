@@ -72,6 +72,18 @@ You can edit any file by modifying `src/app/**.tsx`. The page updates automatica
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and
 load Onest, a custom Google Font.
 
+## Commands
+
+All commands are run from the root of the project, from a terminal:
+
+| Command            | Action                                      |
+|:-------------------|:--------------------------------------------|
+| `npm install`      | Installs dependencies                       |
+| `npm run dev`      | Starts local dev server at `localhost:3000` |
+| `npm run build`    | Build your production site                  |
+| `npm run lint`     | Run Linter project                          |
+| `npm run lint:fix` | Run Linter project and fixed issues         |
+
 ## Contributors ![GitHub contributors](https://img.shields.io/github/contributors/DavidCast27/colombia-info)
 
 <a href="https://github.com/DavidCast27/colombia-info/graphs/contributors">
