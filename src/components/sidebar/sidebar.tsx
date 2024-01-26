@@ -13,7 +13,8 @@ export function Sidebar({ className }: SidebarProps) {
 	
   const MENU = [
     { href: '/regions', label: 'Regiones' },
-    { href: '/maps', label: 'Mapas' }
+    { href: '/maps', label: 'Mapas' },
+    { href: '/presidents', label: 'Presidentes' }
   ]
   return (
     <aside className={cn('fixed h-svh border-r border-white/50 hidden md:block w-72 p-8', className)}>

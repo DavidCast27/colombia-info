@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 
-import { CardSpecification } from '@/components/cards/card-specification';
+import { CardInformative } from '@/components/cards/card-informative';
 import { LandPlot } from '@/components/ui/icons/land-plot';
 import { Landmark } from '@/components/ui/icons/landmark';
 import { LocateFixed } from '@/components/ui/icons/locate-fixed';
@@ -38,37 +38,37 @@ export default async function Home() {
         </Typography>
       </header>
       <section className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-4 mb-10'>
-        <CardSpecification
+        <CardInformative
           title='Capital'
           text={stateCapital}
           icon={<Landmark/>}
         />
-        <CardSpecification
+        <CardInformative
           title='Poblacion'
           text={<>{population.toLocaleString('es-CO')}</>}
           icon={<Users/>}
         />
-        <CardSpecification
+        <CardInformative
           title='Superficie'
           text={<>{`${surface.toLocaleString('es-CO')} km`}<sup>2</sup></>}
           icon={<LandPlot/>}
         />
-        <CardSpecification
+        <CardInformative
           title='Moneda'
           text={<>{currency}</>}
           icon={<Receipt/>}
         />
-        <CardSpecification
+        <CardInformative
           title='Region'
           text={<>{region}</>}
           icon={<LocateFixed/>}
         />
-        <CardSpecification
+        <CardInformative
           title='Sub region'
           text={<>{subRegion}</>}
           icon={<MapPinned/>}
         />
-        <CardSpecification
+        <CardInformative
           className='col-span-1 lg:col-span-2'
           title='Limita con'
           text={<>{borders.join(', ')}</>}
