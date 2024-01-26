@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-import { CardSpecification } from "@/components/card-specification/card-specification";
+import { CardSpecification } from "@/components/cards/card-specification";
 import { LandPlot } from "@/components/ui/icons/land-plot";
 import { Landmark } from "@/components/ui/icons/landmark";
 import { LocateFixed } from "@/components/ui/icons/locate-fixed";
