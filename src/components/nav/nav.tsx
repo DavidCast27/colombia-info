@@ -2,8 +2,11 @@ import Link from "next/link";
 
 import { Typography } from "../ui/typography";
 
-export function Nav () {
-  const MENU = [{ href: "/regions", label: "Regiones" }];
+export function Nav() {
+  const MENU = [
+    { href: "/regions", label: "Regiones" },
+    { href: "/maps", label: "Mapas" },
+  ];
 
   return (
     <nav>
@@ -20,5 +23,5 @@ export function Nav () {
         ))}
       </ul>
     </nav>
-  )
+  );
 }

@@ -13,7 +13,7 @@ export function Sidebar({ className }: SidebarProps) {
   return (
     <aside
       className={cn(
-        "border-r border-white/50 float-left h-full hidden md:block w-1/3 p-8",
+        "fixed h-svh border-r border-white/50 hidden md:block w-72 p-8",
         className
       )}
     >
