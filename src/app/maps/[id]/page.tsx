@@ -6,12 +6,19 @@ import React from "react";
 import { Typography } from "@/components/ui/typography";
 import { findOneMap } from "@/lib/maps";
 
+type Props = {
+	params: {id: string}
+}
 
-export const metadata: Metadata = {
-  title: 'Edit invoice',
-};
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const id = params.id
+  const map = await findOneMap(id)
+  return {
+    title: map?.name,
+  }
+}
 
-export default async function PageDetail({ params }: {params: {id: string}}) {
+export default async function PageDetail({ params }: Props) {
   const id = params.id;
   const map = await findOneMap(id)
   if (!map) notFound();

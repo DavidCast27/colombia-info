@@ -9,12 +9,19 @@ import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Typography } from "@/components/ui/typography";
 import { findOneRegion } from "@/lib/regions";
 
+type Props = {
+	params: {id: string}
+}
 
-export const metadata: Metadata = {
-  title: 'Edit invoice',
-};
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const id = params.id
+  const region = await findOneRegion(id)
+  return {
+    title: `Region ${region?.name}`,
+  }
+}
 
-export default async function PageDetail({ params }: {params: {id: string}}) {
+export default async function PageDetail({ params }: Props) {
   const id = params.id;
   const region = await findOneRegion(id)
   if (!region) notFound();

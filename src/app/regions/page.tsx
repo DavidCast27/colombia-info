@@ -1,9 +1,14 @@
+import { Metadata } from "next";
 import React from 'react';
 
 import { CardItem } from "@/components/cards/card-item";
 import { Typography } from "@/components/ui/typography";
 import { findAllRegions } from "@/lib/regions";
 import { Region } from "@/types/region";
+
+export const metadata: Metadata = {
+  title: 'Regiones',
+};
 
 export default async function Regions(): Promise<React.ReactElement> {
   const regions = await findAllRegions()

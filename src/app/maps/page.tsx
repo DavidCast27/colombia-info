@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import React from 'react';
 
 import { CardItem } from "@/components/cards/card-item";
@@ -5,6 +6,10 @@ import { Typography } from "@/components/ui/typography";
 import { findAllMaps } from "@/lib/maps";
 import { Map } from "@/types/map";
 
+
+export const metadata: Metadata = {
+  title: 'Mapas',
+};
 export default async function Maps(): Promise<React.ReactElement> {
   const maps: Map[] = await findAllMaps()
   return (
