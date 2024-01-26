@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 
 interface CardSpecificationProps extends React.HTMLAttributes<HTMLDivElement> {
 	title: string,
-	text: React.ReactElement
+	text: React.ReactElement | string
 	icon: React.ReactElement
 }
 
