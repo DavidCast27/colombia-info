@@ -1,26 +1,25 @@
 import { API_BASE_URL } from "@/constants";
-import { Region } from "@/types/region";
+import { Map } from "@/types/map";
 
 
-const BASE_URL = `${API_BASE_URL}/Region`
+const BASE_URL = `${API_BASE_URL}/Map`
 
-export async function findAllRegions(): Promise<Region[]> {
+export async function findAllMaps(): Promise<Map[]> {
   try {
     const res: Response = await fetch(BASE_URL)
     if (!res.ok) throw new Error('Failed to fetch data')
-    return await res.json() as Region[]
+    return await res.json() as Map[]
   } catch (err) {
     console.log((err as Error).message)
     return []
   }
 }
 
-
-export async function findOneRegion(id: string): Promise<Region | null> {
+export async function findOneMap(id: string): Promise<Map | null> {
   try {
-    const res: Response = await fetch(`${BASE_URL}/${id}/departments`)
+    const res: Response = await fetch(`${BASE_URL}/${id}`)
     if (!res.ok) throw new Error('Failed to fetch data')
-    return await res.json() as Region
+    return await res.json() as Map
   } catch (err) {
     console.log((err as Error).message)
     return null
