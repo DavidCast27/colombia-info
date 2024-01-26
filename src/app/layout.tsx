@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 import { Onest } from 'next/font/google'
 import '../styles/globals.css'
-import React from "react";
+import React from 'react';
 
-import { Sidebar } from "@/components/sidebar/sidebar";
+import { Sidebar } from '@/components/sidebar/sidebar';
 
 const onest = Onest({ subsets: ['latin'] })
 
@@ -21,13 +21,13 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" className="dark">
+    <html lang='en' className='dark'>
       <body className={`flex h-screen ${onest.className}`}>
         <Sidebar/>
-        <main className="flex flex-col mx-auto md:pl-80 w-full md:w-[1400px] p-8">
+        <main className='flex flex-col mx-auto md:pl-80 w-full md:w-[1400px] p-8'>
           {children}
           <footer
-            className="border border-white mt-auto bg-[#FFAFFF]"
+            className='border border-white mt-auto bg-[#FFAFFF]'
           >
 				footer
           </footer>
