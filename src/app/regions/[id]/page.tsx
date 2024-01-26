@@ -23,11 +23,11 @@ export default async function PageDetail({ params }: {params: {id: string}}) {
     <>
       <Typography className="text-center ml-2 md:text-start" variant="h1">{`Región ${region.name}`}</Typography>
       <section className="flex gap-6 flex-col items-center 2xl:items-start">
-        <div className="flex gap-6 flex-col lg:flex-row items-center 2xl:items-start">
+        <div className="flex gap-8 flex-col lg:flex-row items-center 2xl:items-start">
           <Image
             src={`/assets/regions/${id}.png`}
             width={350}
-            height={450}
+            height={350}
             className="block"
             alt={`Imagen de ${region.name}`}
           />
