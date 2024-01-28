@@ -1,5 +1,5 @@
-import { API_BASE_URL } from "@/constants";
-import { Map } from "@/types/map";
+import { API_BASE_URL } from '@/constants';
+import { Map } from '@/types/map';
 
 
 const BASE_URL = `${API_BASE_URL}/Map`

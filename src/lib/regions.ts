@@ -1,5 +1,5 @@
-import { API_BASE_URL } from "@/constants";
-import { Region } from "@/types/region";
+import { API_BASE_URL } from '@/constants';
+import { Region } from '@/types/region';
 
 
 const BASE_URL = `${API_BASE_URL}/Region`
