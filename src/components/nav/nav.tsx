@@ -1,8 +1,9 @@
+'use client'
 import Link from "next/link";
 
 import { Typography } from "../ui/typography";
 
-export function Nav() {
+export function Nav({ setOpen = () => {} }: { setOpen?: any}) {
   const MENU = [
     { href: "/regions", label: "Regiones" },
     { href: "/maps", label: "Mapas" },
@@ -16,6 +17,7 @@ export function Nav() {
             <Link
               href={href}
               className="flex items-center justify-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+              onClick={() => setOpen(false)}
             >
               <Typography variant="span">{label}</Typography>
             </Link>
