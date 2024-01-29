@@ -15,7 +15,7 @@ export default async function Maps(): Promise<React.ReactElement> {
   const maps: Map[] = await findAllMaps()
   return (
     <>
-      <Typography className='text-center ml-2 md:text-start' variant='h1'>Mapas de colombia</Typography>
+      <Typography className='text-center md:text-start' variant='h1'>Mapas de colombia</Typography>
       <CardList>
         {maps.map(({ id, name, urlImages }: Map) => (
           <CardItem key={id} title={name} srcImage={urlImages[0]} href={`/maps/${id}`}/>

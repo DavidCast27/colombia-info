@@ -15,7 +15,7 @@ export default async function Regions(): Promise<React.ReactElement> {
   const regions = await findAllRegions()
   return (
     <>
-      <Typography className='text-center ml-2 md:text-start' variant='h1'>Regiones de colombia</Typography>
+      <Typography className='text-center md:text-start' variant='h1'>Regiones de colombia</Typography>
       <CardList>
         {regions.map(({ id, name }: Region) => (
           <CardItem key={id} title={name} srcImage={`/assets/regions/${id}.png`} href={`/regions/${id}`}/>

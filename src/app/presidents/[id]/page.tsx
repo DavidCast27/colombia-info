@@ -31,7 +31,7 @@ export default async function PageDetail({ params }: Props) {
 	
   return (
     <>
-      <Typography className='text-center ml-2 md:text-start' variant='h1'>{fullName}</Typography>
+      <Typography className='text-center md:text-start' variant='h1'>{fullName}</Typography>
       <section className='flex gap-6 flex-col-reverse 2xl:flex-row items-center 2xl:items-start '>
         <Image
           blurDataURL='/assets/default/avatar.png'
