@@ -4,13 +4,13 @@ import { Card, CardContent, CardDescription, CardHeader } from '@/components/ui/
 import { Typography } from '@/components/ui/typography';
 import { cn } from '@/lib/utils';
 
-interface CardSpecificationProps extends React.HTMLAttributes<HTMLDivElement> {
+interface CardInformativeProps extends React.HTMLAttributes<HTMLDivElement> {
 	title: string,
 	text: React.ReactElement | string
-	icon: React.ReactElement
+	icon?: React.ReactElement
 }
 
-export function CardSpecification({ title, text, className, icon }: CardSpecificationProps) {
+export function CardInformative({ title, text, className, icon }: CardInformativeProps) {
   return (
     <Card className={cn('w-full', className)}>
       <CardHeader>
