@@ -45,7 +45,7 @@ export default async function Home() {
         />
         <CardInformative
           title='Poblacion'
-          text={<>{population.toLocaleString('es-CO')}</>}
+          text={population.toLocaleString('es-CO')}
           icon={<Users/>}
         />
         <CardInformative
@@ -55,23 +55,23 @@ export default async function Home() {
         />
         <CardInformative
           title='Moneda'
-          text={<>{currency}</>}
+          text={currency}
           icon={<Receipt/>}
         />
         <CardInformative
           title='Region'
-          text={<>{region}</>}
+          text={region}
           icon={<LocateFixed/>}
         />
         <CardInformative
           title='Sub region'
-          text={<>{subRegion}</>}
+          text={subRegion}
           icon={<MapPinned/>}
         />
         <CardInformative
           className='col-span-1 lg:col-span-2'
           title='Limita con'
-          text={<>{borders.join(', ')}</>}
+          text={borders.join(', ')}
           icon={<Map/>}
         />
       </section>
