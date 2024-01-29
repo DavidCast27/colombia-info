@@ -3,6 +3,7 @@ import { Onest } from 'next/font/google';
 import '../styles/globals.css';
 import React from 'react';
 
+import { Footer } from '@/components/footer/footer';
 import { HeaderMobile } from '@/components/header/header-mobile';
 import { Sidebar } from '@/components/sidebar/sidebar';
 
@@ -28,10 +29,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <Sidebar/>
         <main className='flex flex-col mx-auto md:pl-80 w-full md:w-[1400px] p-8'>
           {children}
-          <footer className='border border-white mt-auto bg-[#FFAFFF]'>
-				footer
-          </footer>
+          <Footer/>
         </main>
+		
       </body>
     </html>
   );

@@ -31,7 +31,7 @@ export default async function Home() {
     <>
       <header>
         <Typography
-          className='text-center ml-2 md:text-start'
+          className='text-center md:text-start'
           variant='h1'
         >
           {`Esto es ${name}`}
@@ -76,8 +76,8 @@ export default async function Home() {
         />
       </section>
       <section>
-        <article className='flex gap-6 flex-col xl:flex-row items-center xl:items-start '>
-          <Typography className='w-full' variant='p'>{description}</Typography>
+        <article className='flex gap-6 flex-col xl:flex-row items-center xl:items-start mb-10 md:mb-0'>
+          <Typography className='w-full mb-0' variant='p'>{description}</Typography>
           <Image src={flags[1]} alt='colombian flag' width={800} height={500} sizes='100vw'/>
         </article>
       </section>

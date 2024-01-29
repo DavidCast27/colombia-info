@@ -28,7 +28,7 @@ export default async function PageDetail({ params }: Props) {
 	
   return (
     <>
-      <Typography className='text-center ml-2 md:text-start' variant='h1'>{`Región ${region.name}`}</Typography>
+      <Typography className='text-center md:text-start' variant='h1'>{`Región ${region.name}`}</Typography>
       <section className='flex gap-6 flex-col items-center 2xl:items-start'>
         <div className='flex gap-8 flex-col lg:flex-row items-center 2xl:items-start'>
           <Image
