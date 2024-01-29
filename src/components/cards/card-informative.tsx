@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils';
 interface CardInformativeProps extends React.HTMLAttributes<HTMLDivElement> {
 	title: string,
 	text: React.ReactElement | string
-	icon: React.ReactElement
+	icon?: React.ReactElement
 }
 
 export function CardInformative({ title, text, className, icon }: CardInformativeProps) {

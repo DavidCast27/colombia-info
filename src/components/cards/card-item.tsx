@@ -29,12 +29,13 @@ export function CardItem({ title, srcImage, href, className, description }: Card
       onClick={handleClick}
     >
       <CardHeader
-        className='absolute top-0 right-5 z-20 m-0 pt-4 ps-4 transition duration-300 easi-in-out group-hover:-translate-y-1 group-hover:translate-x-3 group-hover:scale-110'>
+        className='absolute top-0 right-5 z-20 m-0 pt-4 ps-4 transition duration-300 easi-in-out group-hover:-translate-y-1 group-hover:translate-x-3 group-hover:scale-110'
+      >
         <CardTitle className='font-bold text-black'>{title}</CardTitle>
         <CardDescription className='text-black'>{description}</CardDescription>
       </CardHeader>
       <CardContent
-        className='overflow-hidden rounded-xl opacity-80 transition duration-300 ease-in-out group-hover:opacity-100 p-0'>
+        className='overflow-hidden rounded-xl opacity-80 transition duration-300 ease-in-out group-hover:opacity-100 p-0 h-full'>
         <Image
           className='animate-fade-in h-full w-full scale-100 transform object-cover object-center opacity-100 transition duration-300 group-hover:scale-110'
           src={srcImage ?? '/assets/default/avatar.png'}
