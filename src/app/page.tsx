@@ -45,7 +45,7 @@ export default async function Home() {
         />
         <CardSpecification
           title='Poblacion'
-          text={<>{population.toLocaleString('es-CO')}</>}
+          text={population.toLocaleString('es-CO')}
           icon={<Users/>}
         />
         <CardSpecification
@@ -55,23 +55,23 @@ export default async function Home() {
         />
         <CardSpecification
           title='Moneda'
-          text={<>{currency}</>}
+          text={currency}
           icon={<Receipt/>}
         />
         <CardSpecification
           title='Region'
-          text={<>{region}</>}
+          text={region}
           icon={<LocateFixed/>}
         />
         <CardSpecification
           title='Sub region'
-          text={<>{subRegion}</>}
+          text={subRegion}
           icon={<MapPinned/>}
         />
         <CardSpecification
           className='col-span-1 lg:col-span-2'
           title='Limita con'
-          text={<>{borders.join(', ')}</>}
+          text={borders.join(', ')}
           icon={<Map/>}
         />
       </section>
