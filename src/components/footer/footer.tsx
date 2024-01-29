@@ -3,6 +3,29 @@ import React from 'react';
 import { GitHub } from '@/components/ui/icons/GitHub';
 import { Typography } from '@/components/ui/typography';
 
+const AuthorAnchor = () => (
+  <strong>
+    <a
+      href='https://github.com/Mteheran/api-colombia/commits?author=Mteheran'
+      target='_blank'
+      className='hover:underline'
+    >
+			Miguel Teheran
+    </a>
+  </strong>
+)
+const APIAnchor = () => (
+  <strong>
+    <a
+      href='https://api-colombia.com/'
+      target='_blank'
+      className='hover:underline'
+    >
+			API Colombia
+    </a>
+  </strong>
+)
+
 export function Footer(): React.ReactElement {
   return (
     <footer className='w-full max-w-screen-xl mx-auto pt-4 md:pb-0 border-white/50 border-t mt-auto'>
@@ -30,11 +53,11 @@ export function Footer(): React.ReactElement {
             </li>
           </ul>
         </div>
-        <Typography variant='span' className='m-auto'> Agradecimiento espcial a <strong><a
-          href='https://github.com/Mteheran/api-colombia/commits?author=Mteheran' target='_blank'
-          className='hover:underline'>Miguel Teheran</a></strong> y a toda la comunidad en general por
-					haber creado <strong><a href='https://api-colombia.com/' target='_blank'
-					                        className='hover:underline'>API Colombia</a></strong>
+        <Typography
+          variant='span'
+          className='m-auto'
+        >Agradecimiento espcial a <AuthorAnchor/> y a toda la comunidad en general por haber creado
+          <APIAnchor/>
         </Typography>
         <div className='my-auto sm:justify-center'>
           <a href='https://github.com/DavidCast27/colombia-info' target='_blank'>
