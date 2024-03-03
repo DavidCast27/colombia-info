@@ -14,7 +14,7 @@ import { findCountryColombia } from '@/lib/country';
 import { Country } from '@/types/country';
 
 export default async function Home() {
-  const country: Country = await findCountryColombia()
+  const country: Country = await findCountryColombia();
   const {
     name,
     description,
@@ -25,15 +25,12 @@ export default async function Home() {
     currency,
     flags,
     region,
-    subRegion
-  } = country
+    subRegion,
+  } = country;
   return (
     <>
       <header>
-        <Typography
-          className='text-center md:text-start'
-          variant='h1'
-        >
+        <Typography className='text-center md:text-start' variant='h1'>
           {`Esto es ${name}`}
         </Typography>
       </header>
@@ -41,46 +38,51 @@ export default async function Home() {
         <CardInformative
           title='Capital'
           text={stateCapital}
-          icon={<Landmark/>}
+          icon={<Landmark />}
         />
         <CardInformative
           title='Poblacion'
           text={population.toLocaleString('es-CO')}
-          icon={<Users/>}
+          icon={<Users />}
         />
         <CardInformative
           title='Superficie'
-          text={<>{`${surface.toLocaleString('es-CO')} km`}<sup>2</sup></>}
-          icon={<LandPlot/>}
+          text={
+            <>
+              {`${surface.toLocaleString('es-CO')} km`}
+              <sup>2</sup>
+            </>
+          }
+          icon={<LandPlot />}
         />
-        <CardInformative
-          title='Moneda'
-          text={currency}
-          icon={<Receipt/>}
-        />
-        <CardInformative
-          title='Region'
-          text={region}
-          icon={<LocateFixed/>}
-        />
+        <CardInformative title='Moneda' text={currency} icon={<Receipt />} />
+        <CardInformative title='Region' text={region} icon={<LocateFixed />} />
         <CardInformative
           title='Sub region'
           text={subRegion}
-          icon={<MapPinned/>}
+          icon={<MapPinned />}
         />
         <CardInformative
           className='col-span-1 lg:col-span-2'
           title='Limita con'
           text={borders.join(', ')}
-          icon={<Map/>}
+          icon={<Map />}
         />
       </section>
       <section>
         <article className='flex gap-6 flex-col xl:flex-row items-center xl:items-start mb-10 md:mb-0'>
-          <Typography className='w-full mb-0' variant='p'>{description}</Typography>
-          <Image src={flags[1]} alt='colombian flag' width={800} height={500} sizes='100vw'/>
+          <Typography className='w-full mb-0' variant='p'>
+            {description}
+          </Typography>
+          <Image
+            src={flags[1]}
+            alt='colombian flag'
+            width={800}
+            height={500}
+            sizes='100vw'
+          />
         </article>
       </section>
     </>
-  )
+  );
 }
