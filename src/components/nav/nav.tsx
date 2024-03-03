@@ -11,6 +11,7 @@ interface NavProps {
 export function Nav({ setOpen }: NavProps) {
   const MENU = [
     { href: '/regions', label: 'Regiones' },
+    { href: '/departments', label: 'Departamentos' },
     { href: '/maps', label: 'Mapas' },
     { href: '/presidents', label: 'Presidentes' }
   ];
